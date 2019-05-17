@@ -1,0 +1,11 @@
+<h1> Add a Song</h1><br>
+
+<input  [(ngModel)]="name" type="text" placeholder="name" name="name"/><br>
+<input [(ngModel)]="duration" type="text" placeholder="duration" name="duration"/><br>
+Artist:  <select  [(ngModel)]="artistId" >
+<option *ngFor="let a of allArtists" [value]="a._id">{{a.artistName}}</option>
+</select>
+
+<br>
+<br>
+<button (click)="addSong()">Add</button>
